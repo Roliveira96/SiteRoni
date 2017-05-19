@@ -2,63 +2,85 @@
 <html>
 
 <head>
+    <title>Untitled Document</title>
     <meta charset="UTF-8">
-    <title>Rastro do mouse</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" type="text/css" href="materialize/css/materialize.css">
     <style>
-        .trail {
-            /* classe para os elementos trilha */
-            position: absolute;
-            height: 20px;
-            width: 50px;
-            border-radius: 50px;
-            background: red;
-            left: 200px;
-            top: 100px;
-        }
-        
-        .trail1 {
-            /* classe para os elementos trilha */
-            position: absolute;
-            margin: 0 0 0 50px;
-            height: 20px;
-            width: 50px;
-            border-radius: 50px;
-            background: red;
-            left: 200px;
-            top: 100px;
-        }
-        
-        body {
-            height: 300px;
+        #paiDiv {
+            border: 1px solid;
+            padding: 0 0.25em
         }
 
     </style>
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
 </head>
 
-<body>
-    <div class="trail"></div>
-    <div class="trail1"></div>
+<body class="light-green accent-2" onresize="mexeu()">
+    <div class="container center-align">
+        <div class="card z-depth-5">
+            <div class=" card-image waves-effect waves-block waves-light" id="imagem">
+                <img class="activator " src="imagens/1.jpg">
 
-    <script>
-        contador = 0;
-        document.querySelector("body").onmousemove = function(e) {
-            document.querySelector(".trail").style.left = e.clientX + 0 + "px";
-            document.querySelector(".trail").style.top = e.clientY + 50 + "px";
-            document.querySelector(".trail1").style.left = e.clientX + 0 + "px";
-            document.querySelector(".trail1").style.top = e.clientY + 50 + "px";
-            contador++;
-            if (contador % 2 == 0) {
-                document.querySelector(".trail").style.background = "red";
-                document.querySelector(".trail1").style.background = "blue";
-            } else {
-                document.querySelector(".trail").style.background = "blue";
-                document.querySelector(".trail1").style.background = "red";
-            }
-            console.log(e.clientX);
- 
-        }
+            </div>
 
-    </script>
+        </div>
+
+        <div class="card z-depth-5">
+            <div class="flow-text">
+                <div class="card-content center-align">
+                    <h1>Exercício 3 </h1>
+                    <p>Edite a página HTML [link-propagation.html] que possui um div e dois links internos. O div, chamado de Div Pai, apresenta dois filhos, um link com comportamento normal e outro rebelde, chamado de link desobediente. O link normal, ao ser clicado, deve propagar o evento de clique para seu pai e então abrir o site referenciado no atributo href. Já o link desobediente não deve realizar nenhuma destas ações. Para isso, altere o código JavaScript para que o link desobediente apresente este comportamento rebelde.
+                        <br> Dica
+                        <br>
+                        <br> Fazer uso das funções de parar a propagação de eventos e cancelar a ação padrão de um evento</p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="card z-depth-5">
+            <div class="flow-text">
+                <div id="paiDiv">
+                    <h1>Div Pai</h1>
+                    <p><a href="http://api.jquery.com" id="normalLink">Link Normal</a></p>
+                    <p>Clique em qualquer lugar no div para saber que é o pai.</p>
+                    <p><a href="http://api.jquery.com" id="desobedienteLink">Link Desobediente</a></p>
+                </div>
+                <script>
+                    var $ = function(id) {
+                        return document.getElementById(id);
+                    }
+
+                    $("paiDiv").onclick = function() {
+                        alert("Sou o Pai Div");
+                    }
+
+                    $("normalLink").onclick = function() {
+                        alert("Sou normal, mostrarei meu pai e vou abrir a página do href");
+                    }
+
+                    $("desobedienteLink").onclick = function(e) {
+                        e.stopPropagation();
+                        e.preventDefault();
+
+
+                        alert("Sou desobediente, NÃO mostrarei meu pai e NÃO vou abrir a página do href");
+
+                    }
+
+                </script>
+            </div>
+
+        </div>
+
+    </div>
 </body>
 
 </html>
