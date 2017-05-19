@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Rastro do mouse</title>
+    <style>
+        .trail {
+            /* classe para os elementos trilha */
+            position: absolute;
+            height: 20px;
+            width: 50px;
+            border-radius: 50px;
+            background: red;
+            left: 200px;
+            top: 100px;
+        }
+        
+        .trail1 {
+            /* classe para os elementos trilha */
+            position: absolute;
+            margin: 0 0 0 50px;
+            height: 20px;
+            width: 50px;
+            border-radius: 50px;
+            background: red;
+            left: 200px;
+            top: 100px;
+        }
+        
+        body {
+            height: 300px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="trail"></div>
+    <div class="trail1"></div>
+
+    <script>
+        contador = 0;
+        document.querySelector("body").onmousemove = function(e) {
+            document.querySelector(".trail").style.left = e.clientX + 0 + "px";
+            document.querySelector(".trail").style.top = e.clientY + 50 + "px";
+            document.querySelector(".trail1").style.left = e.clientX + 0 + "px";
+            document.querySelector(".trail1").style.top = e.clientY + 50 + "px";
+            contador++;
+            if (contador % 2 == 0) {
+                document.querySelector(".trail").style.background = "red";
+                document.querySelector(".trail1").style.background = "blue";
+            } else {
+                document.querySelector(".trail").style.background = "blue";
+                document.querySelector(".trail1").style.background = "red";
+            }
+            console.log(e.clientX);
+
+        }
+
+    </script>
+</body>
+
+</html>
