@@ -1,0 +1,123 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    background: url(../images/fundo/giphy.gif);
+}
+main {
+    flex: 1 0 auto;
+}
+.seila {
+    text-align: center;
+}
+#ImagemDeInicioTexto {
+    float: left;
+    margin: 0 15px 10px 0px;
+}
+p {
+    text-align: justify;
+}
+.textoGrande {
+    font-size: 50px;
+    float: top;
+    margin: 0;
+    padding: 0 0 10px 0;
+}
+.android {
+    background-color: #0d4f8b;
+    color: #0d4f8b;
+    /*color: rgb(46, 48, 48);*/
+}
+.play {
+    background-color: #060f50;
+    color: #060f50;
+}
+.xbox {
+    background-color: #1b9400;
+    color: #1b9400;
+}
+.pc {
+    background-color: rgb(255, 145, 2);
+    color: rgb(255, 145, 2);
+}
+.perfil {
+    background-color: #e22424;
+    color: #e22424;
+}
+.titulo,
+.subTitulo {
+    background-color: white;
+    /* font-family: 'Open Sans Condensed', sans-serif;
+        font-family: 'Titillium Web', sans-serif;
+        font-family: 'PT Sans Narrow', sans-serif;
+       font-family: 'Indie Flower', cursive;
+        font-family: 'Anton', sans-serif;
+       font-family: 'Indie Flower', cursive;
+        font-family: 'Lobster', cursive;  */
+    font-family: 'PT Sans Narrow', sans-serif;
+    text-shadow: 0.5px 0.5px white, -0.5px -0.5px rgba(0, 4, 0, 0.72);
+}
+.subTitulo {
+    font-style: italic;
+    font-family: 'Lobster', cursive;
+    /* font-family: 'Open Sans Condensed', sans-serif*/
+}
+.font {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 20px
+}
+.textoMarcado {
+    font-style: oblique;
+    font-weight: bold;
+    background-color: white;
+}
+.textoB {
+    color: aliceblue;
+}
+.spanError {
+    color: red;
+    font-size: 12px;
+    font-family: 'Titillium Web', sans-serif;
+}
+.fundoBranco {
+    background-color: white;
+}
+
+/*
+.fundo {
+    background: url(../images/fundo/giphy.gif) no-repeat center center fixed;
+}
+*/
+
+
+/*font-family: 'Open Sans Condensed', sans-serif;
+        font-family: 'Titillium Web', sans-serif;
+        font-family: 'PT Sans Narrow', sans-serif;
+        font-family: 'Indie Flower', cursive;
+        font-family: 'Anton', sans-serif;
+        font-family: 'Lobster', cursive;  */
+
+.logoSite {
+    /*font-family: 'Frijole', cursive;
+font-family: 'Ceviche One', cursive;
+font-family: 'Modak', cursive;
+font-family: 'Pompiere', cursive;
+*/
+    font-family: 'Frijole', cursive;
+}
+
+/*
+@media (max-width: 720px) {
+    .logoSite {
+        font-size: 5px;
+    }
+}*/
+
+.esconde {
+    display: none;
+}
+.fonteMassa {
+    font-family: 'Titillium Web', sans-serif;
+    text-decoration: inherit;
+    text-shadow: 0.5px 0.5px white, -0.5px -0.5px rgba(0, 4, 0, 0.15);
+}
