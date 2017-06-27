@@ -6,6 +6,7 @@
     <meta charset="UTF-8">
     <meta name="description" content="">
     <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="stylesheet" href="http://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="assets/libraries/font-awesome/css/font-awesome.min.css">
@@ -761,11 +762,11 @@
                                         <div class="col s12 l12 center-align">
 
                                             <!-- Enviar -->
-                                            <button class="btn  perfil waves-effect black-light  textoB" type="button" name="action" id="enviar">Cadastrar
+                                            <button class="btn s12  perfil waves-effect black-light  textoB" type="button" name="action" id="enviar">Salvar
                                                 <i class="material-icons right">send</i>
                                             </button>
                                             <!-- Limpar -->
-                                            <button class="btn perfil waves-effect black-light  textoB" type="reset">Limpar
+                                            <button class="btn s12 perfil waves-effect black-light  textoB" type="reset">Limpar
                                                 <i class="material-icons right">delete_sweep</i>
                                             </button>
                                             <br>
@@ -818,23 +819,23 @@
                             <!-- Imput Selinar Tipo Genero de Game -->
                             <div class="col s12 l12">
                                 <h5 class="titulo perfil">Selecione os Genero de Jogo que você Joga!</h5>
-                                <form name="Jogos">
+                                <form name="form-jogos">
                                     <div class="row">
                                         <div class="col s3">
-                                            <input type="checkbox" id="terror" />
+                                            <input type="checkbox" name="jogo" value="terror" id="terror" />
                                             <label for="terror">Terror</label>
                                         </div>
 
                                         <div class="col s3">
-                                            <input type="checkbox" id="Ação" />
+                                            <input type="checkbox" name="jogo" value="ação" id="Ação" />
                                             <label for="Ação">Ação</label>
                                         </div>
                                         <div class="col s3">
-                                            <input type="checkbox" id="Corrida" />
+                                            <input type="checkbox" name="jogo" value="corrida" id="Corrida" />
                                             <label for="Corrida">Corrida</label>
                                         </div>
                                         <div class="col s3">
-                                            <input type="checkbox" id="Tiro" />
+                                            <input type="checkbox" name="jogo" value="tiro" id="Tiro" />
                                             <label for="Tiro">Tiro</label>
                                         </div>
                                     </div>
@@ -850,6 +851,9 @@
                                 </button>
                             </div>
                         </div>
+                        <div class="row center-align">
+                            <h5 class="titulo perfil " id="resultadoPesquisa"></h5>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -861,11 +865,11 @@
     <!-- fim do main -->
 
     <!-- Incio do Footer-->
-    <footer class="page-footer black accent-4 ">
+    <footer class="page-footer black accent-4" id="mouse">
         <div class="container ">
             <div class="row ">
                 <div class="col s12 center-align ">
-                    <a href="www.google.com">
+                    <a href="https://github.com/Roliveira96">
                         <img src="assets/resources/images/4p8yud69hvkx.png " id="utfpr-footer " class=" img-responsive " height="70px ">
                     </a>
                 </div>
@@ -875,7 +879,9 @@
             <div class="container ">
                 <p class="seila ">
                     &copy; Copyright - Todos os direitos reservados
+                    <br>Desenvolvido por Ricardo de Oliveira e Valmor Moreira.
                     <br>Foitibora Studios
+                    <small id="cordenadas"></small>
                 </p>
             </div>
         </div>
