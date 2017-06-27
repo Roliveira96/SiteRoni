@@ -32,16 +32,16 @@
         $('#xboxContainer ,#playContainer,#pcContainer,#perfilContainer').fadeOut();
         $('html, body').animate({
             scrollTop: 0
-        }, "slow");
+        }, 'slow');
     }();
 
 
     $('.parallax').parallax();
-    $('.button - collapse ').sideNav();
+    $('.button-collapse ').sideNav();
     $('.collapsible').collapsible();
     $('select').material_select();
     $('.slider').slider();
-    $(".button-collapse").sideNav();
+    $('.button-collapse ').sideNav();
 
     //Regarega a pagina
     //window.location.reload();
@@ -163,7 +163,7 @@
             $('#xboxContainer ,#playContainer,#pcContainer,#perfilContainer').fadeOut();
             $('html, body').animate({
                 scrollTop: 0
-            }, "slow");
+            }, 'slow');
 
             $('.m1').addClass('active');
             $('.m2').removeClass('active');
@@ -199,7 +199,7 @@
             $('#androiContainer ,#playContainer,#pcContainer,#perfilContainer').fadeOut();
             $('html, body, #wrapper').animate({
                 scrollTop: 0
-            }, "slow");
+            }, 'slow');
 
             $('.m2').addClass('active');
             $('.m1').removeClass('active');
@@ -230,7 +230,7 @@
             $('#androiContainer ,#xboxContainer,#pcContainer,#perfilContainer').fadeOut();
             $('html, body, #wrapper').animate({
                 scrollTop: 0
-            }, "slow");
+            }, 'slow');
 
 
 
@@ -265,7 +265,7 @@
             $('#androiContainer ,#xboxContainer,#playContainer,#perfilContainer').fadeOut();
             $('html, body, #wrapper').animate({
                 scrollTop: 0
-            }, "slow");
+            }, 'slow');
 
             $('.m4').addClass('active');
             $('.m2').removeClass('active');
@@ -298,7 +298,7 @@
             $('#androiContainer ,#xboxContainer,#playContainer,#pcContainer').fadeOut();
             $('html, body, #wrapper').animate({
                 scrollTop: 0
-            }, "slow");
+            }, 'slow');
 
 
             $('.m5').addClass('active');
@@ -375,16 +375,6 @@
 
         });
     }
-
-
-
-
-    //kkkkk
-    //kkkkk
-    //kkkkk
-    //kkkkk
-    //kkkkk
-    //kkkkk
 
 
     //Impedir Digitar letras e caracteres nos Input Nome 
@@ -595,14 +585,15 @@
     var contador = 0;
     document.addEventListener('click', function () {
         contador++;
-        /*
-                switch(contador){
-                      case 10:
+
+        switch (contador) {
+            case 10:
                 alert('Já foram 10 clicks');
-                break; case 100:
+                break;
+            case 100:
                 alert('Já foram 100 clicks');
                 break;
-                               }*/
+        }
         $id('contagemDeClique').value = 'Quantos clicks já foram dados ' +
             contador;
 
@@ -613,9 +604,11 @@
         selectAll[i].classList.add('fonteMassa');
 
     }
+    //bug haha 
+
     $id('problema').addEventListener('click', function () {
 
-        $id('sidenav-overlay').remove('#sidenav-overlay ');
+        $id('sidenav-overlay').remove('#sidenav-overlay');
 
 
 

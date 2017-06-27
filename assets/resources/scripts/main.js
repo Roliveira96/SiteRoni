@@ -6,7 +6,7 @@
      do {
          var q = confirm('Você tem que ser maior de idade para acersar este site!');
          if (q) {
-             alert('Bem Vindo');
+             window.alert('Bem Vindo');
              console.log('Bem vindo Programador foitibora');
          } else {
              alert('Feche o navegador e vá estudar!');
@@ -21,7 +21,7 @@
      function inciar() {
 
          $('.parallax').parallax();
-         $(".button-collapse").sideNav();
+         $('.button-collapse').sideNav();
          $('.collapsible').collapsible();
          $('select').material_select();
          $('.slider').slider();
